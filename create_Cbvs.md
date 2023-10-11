@@ -11,6 +11,8 @@ In Django, you can create class-based views (CBVs) to handle different HTTP meth
        name = models.CharField(max_length=100)
        description = models.TextField()
        # Add other fields as needed
+      def __str__(self):
+        return self.title
    ```
 
 2. **Create a URL pattern:**
@@ -52,7 +54,7 @@ In Django, you can create class-based views (CBVs) to handle different HTTP meth
 
    ```bash
    <!-- yourapp/yourmodel_form.html -->
-   <form method="post">
+   <form method="post" enctype = "multipart/form-data">
        {% csrf_token %}
        {{ form.as_p }}
        <button type="submit">Create</button>
