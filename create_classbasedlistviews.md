@@ -1,17 +1,6 @@
 In Django, you can create a list view by using the Django framework's built-in views and templates, as well as defining a model and setting up the necessary URL patterns. Here's a step-by-step guide to creating a simple list view in Django:
 
-1. **Create a Django Project and App** (if you haven't already):
-   If you haven't already created a Django project and app, you can do so by running the following commands in your terminal:
-
-   ```bash
-   django-admin startproject project_name
-   cd project_name
-   python manage.py startapp app_name
-   ```
-
-   Replace `project_name` and `app_name` with your desired project and app names.
-
-2. **Define a Model**:
+1. **Define a Model**:
    In your app, define a model in the `models.py` file. This model represents the data you want to display in your list view. For example:
 
    ```python
