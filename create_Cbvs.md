@@ -15,6 +15,16 @@ In Django, you can create class-based views (CBVs) to handle different HTTP meth
         return self.title
    ```
 
+2. **Add model to admin**
+
+   ```bash
+   from django.contrib import admin
+   from .models import myModel
+
+   # Register your models here.
+   admin.site.register(myModel)
+ 
+   ```
 2. **Create a URL pattern:**
    Define a URL pattern that maps to your class-based view. This will determine the URL at which users can access the create view. Add this pattern to your app's `urls.py` file:
 
