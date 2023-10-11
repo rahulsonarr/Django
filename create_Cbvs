@@ -1,9 +1,9 @@
 In Django, you can create class-based views (CBVs) to handle different HTTP methods and encapsulate the logic for handling requests and generating responses. To create a class-based create view, you can use Django's `CreateView` class, which is a generic view that simplifies the process of creating and saving model instances in your database. Here's a step-by-step guide on how to create a class-based create view in Django:
 
-1. Define your model:
+1. **Define your model:**
    First, you need to define the model for which you want to create instances. This model should extend `models.Model` and contain the fields you want to save in the database. For example:
 
-   ```python
+   ```bash
    # models.py
    from django.db import models
 
@@ -13,10 +13,10 @@ In Django, you can create class-based views (CBVs) to handle different HTTP meth
        # Add other fields as needed
    ```
 
-2. Create a URL pattern:
+2. **Create a URL pattern:**
    Define a URL pattern that maps to your class-based view. This will determine the URL at which users can access the create view. Add this pattern to your app's `urls.py` file:
 
-   ```python
+   ```bash
    # urls.py
    from django.urls import path
    from .views import YourModelCreateView
@@ -27,7 +27,7 @@ In Django, you can create class-based views (CBVs) to handle different HTTP meth
    ]
    ```
 
-3. Create a class-based view:
+3. **Create a class-based view:**
    Create a class-based view that extends `CreateView` and specify the following attributes:
    
    - `model`: Set this attribute to your model class.
@@ -36,7 +36,7 @@ In Django, you can create class-based views (CBVs) to handle different HTTP meth
 
    Here's an example of a class-based create view:
 
-   ```python
+   ```bash
    # views.py
    from django.views.generic.edit import CreateView
    from .models import YourModel
@@ -47,10 +47,10 @@ In Django, you can create class-based views (CBVs) to handle different HTTP meth
        fields = ['name', 'description']
    ```
 
-4. Create a template for the form:
+4. **Create a template for the form:**
    Create an HTML template that will render the form. In this template, you can use the `{{ form }}` variable to render the form fields. Save this template in the specified location (`'yourapp/yourmodel_form.html'` in the example above).
 
-   ```html
+   ```bash
    <!-- yourapp/yourmodel_form.html -->
    <form method="post">
        {% csrf_token %}
@@ -59,7 +59,7 @@ In Django, you can create class-based views (CBVs) to handle different HTTP meth
    </form>
    ```
 
-5. (Optional) Customize success behavior:
+5. (Optional) **Customize success behavior:**
    By default, when the form is successfully submitted, Django will redirect to the detail view of the newly created object. If you want to customize this behavior, you can override the `get_success_url` method in your view class.
 
 That's it! With these steps, you've created a class-based create view in Django for your model. Users can access this view by visiting the URL you defined in step 2, and they can use the form to create new instances of your model.
