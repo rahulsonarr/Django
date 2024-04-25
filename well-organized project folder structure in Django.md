@@ -1,5 +1,5 @@
 1.
-
+```bash
 project_name/
 │
 ├── project_name/
@@ -40,9 +40,10 @@ project_name/
 ├── manage.py
 │
 └── requirements.txt
+```
 
 2.
-
+```bash
 project_name/
 │
 ├── project_name/
@@ -75,6 +76,6 @@ project_name/
 │
 └── manage.py
 
-
+```
 
 
